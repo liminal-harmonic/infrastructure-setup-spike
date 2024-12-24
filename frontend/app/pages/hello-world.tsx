@@ -1,3 +1,7 @@
+export async function loader() {
+  return { message: 'Hello, world!' }
+}
+
 export function meta() {
   return [
     { title: 'New React Router App' },

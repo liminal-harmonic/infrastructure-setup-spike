@@ -3,7 +3,8 @@
     "**/*",
     "**/.server/**/*",
     "**/.client/**/*",
-    ".storybook/vite.config copy.ts"
+    ".storybook/vite.config copy.ts",
+    ".react-router/types/**/*"
   ],
   "exclude": [".react-router"],
   "compilerOptions": {
