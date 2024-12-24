@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11"
+  },
+  "scripts": {
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "frontend/**/*.{ts,tsx,js,jsx}": [
+      "cd frontend && eslint --fix",
+      "cd frontend && prettier --write",
+      "cd frontend && tsc --noEmit"
+    ]
+  }
+}
