@@ -4,13 +4,13 @@
     "lint-staged": "^15.2.11"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky install",
+    "pre-commit": "cd frontend && npm run pre-commit",
+    "lint-staged": "npx lint-staged"
   },
   "lint-staged": {
     "frontend/**/*.{ts,tsx,js,jsx}": [
-      "cd frontend && eslint --fix",
-      "cd frontend && prettier --write",
-      "cd frontend && tsc --noEmit"
+      "npm run pre-commit"
     ]
   }
 }

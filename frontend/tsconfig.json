@@ -3,9 +3,9 @@
     "**/*",
     "**/.server/**/*",
     "**/.client/**/*",
-    ".react-router/types/**/*",
     ".storybook/vite.config copy.ts"
   ],
+  "exclude": [".react-router"],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["node", "vite/client"],
