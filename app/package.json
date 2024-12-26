@@ -16,19 +16,19 @@
     "storybook": "storybook dev -p 6006",
     "pre-commit": "npm run typecheck && npm run lint:fix && npm run format",
     "build-storybook": "storybook build",
-    "queries": "ts-node ./src/queries.ts",
-    "caching": "ts-node ./src/caching.ts",
-    "realtime": "ts-node ./src/realtime.ts"
+    "queries": "tsx ./backend/database/queries.ts",
+    "caching": "tsx ./backend/database/caching.ts",
+    "realtime": "tsx ./backend/database/realtime.ts"
   },
   "dependencies": {
+    "@base-ui-components/react": "^1.0.0-alpha.4",
     "@prisma/client": "5.22.0",
     "@prisma/extension-accelerate": "1.2.1",
     "@prisma/extension-pulse": "1.2.0",
-    "@types/node": "22.10.2",
-    "dotenv": "16.4.7",
-    "@base-ui-components/react": "^1.0.0-alpha.4",
     "@react-router/node": "^7.1.0",
     "@react-router/serve": "^7.1.0",
+    "@types/node": "22.10.2",
+    "dotenv": "16.4.7",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -67,11 +67,14 @@
     "prisma": "5.22.0",
     "storybook": "^8.4.7",
     "tailwindcss": "^3.4.16",
-    "ts-node": "10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.2",
     "vite": "^5.4.11",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^2.1.8"
+  },
+  "prisma": {
+    "schema": "src/database/main.prisma"
   }
 }

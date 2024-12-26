@@ -5,11 +5,11 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "pre-commit": "cd frontend && npm run pre-commit",
+    "pre-commit": "cd app && npm run pre-commit",
     "lint-staged": "npx lint-staged"
   },
   "lint-staged": {
-    "frontend/**/*.{ts,tsx,js,jsx}": [
+    "app/**/*.{ts,tsx,js,jsx}": [
       "npm run pre-commit"
     ]
   }
